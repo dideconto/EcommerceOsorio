@@ -14,3 +14,11 @@ C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\Eco
 C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
 C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.RazorTargetAssemblyInfo.cache
 C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.RazorTargetAssemblyInfo.cs
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.dll
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.pdb
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\bin\Debug\netcoreapp2.1\EcommerceOsorio.pdb
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\bin\Debug\netcoreapp2.1\EcommerceOsorio.Views.dll
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\bin\Debug\netcoreapp2.1\EcommerceOsorio.Views.pdb
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.Views.pdb
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.csproj.CopyComplete
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Cadastrar.g.cshtml.cs
