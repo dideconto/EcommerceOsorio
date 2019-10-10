@@ -1,0 +1,4 @@
+﻿ -- INSTRUÇÕES SOBRE O ENTITY FRAMEWORK .NET CORE --
+
+ Instalar o Microsoft.EntityFrameworkCore.SqlServer 2.1.11
+  - Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version: 2.1.11

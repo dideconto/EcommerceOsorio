@@ -1,0 +1,16 @@
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\bin\Debug\netcoreapp2.1\EcommerceOsorio.deps.json
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\bin\Debug\netcoreapp2.1\EcommerceOsorio.runtimeconfig.json
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\bin\Debug\netcoreapp2.1\EcommerceOsorio.runtimeconfig.dev.json
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\bin\Debug\netcoreapp2.1\EcommerceOsorio.dll
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.csprojAssemblyReference.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.csproj.CoreCompileInputs.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.RazorAssemblyInfo.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.RazorAssemblyInfo.cs
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.AssemblyInfoInputs.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.AssemblyInfo.cs
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.TagHelpers.input.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.TagHelpers.output.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.RazorCoreGenerate.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.RazorTargetAssemblyInfo.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.RazorTargetAssemblyInfo.cs
