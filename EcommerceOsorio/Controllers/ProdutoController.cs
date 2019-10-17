@@ -32,7 +32,7 @@ namespace EcommerceOsorio.Controllers
                 Preco = Convert.ToDouble(txtPreco)
             };
             _produtoDAO.Cadastrar(p);
-            return View();
+            return RedirectToAction("Index");
         }
 
         public IActionResult Index()
@@ -40,6 +40,12 @@ namespace EcommerceOsorio.Controllers
             ViewBag.Produtos = _produtoDAO.ListarProdutos();
             ViewBag.DataHora = DateTime.Now;
             return View();
+        }
+
+        public IActionResult Remover(int id)
+        {
+            _produtoDAO.RemoverProduto(id);
+            return RedirectToAction("Index");
         }
     }
 }

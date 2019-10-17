@@ -18,10 +18,19 @@ namespace EcommerceOsorio.DAL
             _context.Produtos.Add(p);
             _context.SaveChanges();
         }
-
         public List<Produto> ListarProdutos()
         {
             return _context.Produtos.ToList();
+        }
+
+        public Produto BuscarProdutoPorId(int id)
+        {
+            return _context.Produtos.Find(id);
+        }
+        public void RemoverProduto(int id)
+        {
+            _context.Produtos.Remove(BuscarProdutoPorId(id));
+            _context.SaveChanges();
         }
     }
 }

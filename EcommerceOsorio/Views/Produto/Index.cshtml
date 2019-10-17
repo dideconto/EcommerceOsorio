@@ -23,6 +23,8 @@
                 <th>Preço</th>
                 <th>Quantidade</th>
                 <th>Criado em</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -34,6 +36,9 @@
                     <td>@item.Preco.ToString("C2")</td>
                     <td>@item.Quantidade</td>
                     <td>@item.CriadoEm</td>
+                    <td>
+                        <a asp-action="Remover" asp-route-id="@item.ProdutoId">Remover</a>
+                    </td>
                 </tr>
             }
         </tbody>
