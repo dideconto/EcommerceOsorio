@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EcommerceOsorio.DAL;
 using EcommerceOsorio.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,9 +33,14 @@ namespace EcommerceOsorio
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            //Criar ID dos DAOs
+            services.AddScoped<ProdutoDAO>();
+
+            //Criar ID de contexto
             services.AddDbContext<Context>
                 (options => options.UseSqlServer
                 (Configuration.GetConnectionString("EcommerceConnection")));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -57,7 +63,7 @@ namespace EcommerceOsorio
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Produto}/{action=Cadastrar}/{id?}");
+                    template: "{controller=Produto}/{action=Index}/{id?}");
             });
         }
     }

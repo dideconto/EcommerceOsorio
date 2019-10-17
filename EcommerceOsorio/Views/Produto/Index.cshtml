@@ -1,0 +1,45 @@
+﻿@{
+    DateTime data = ViewBag.DataHora;
+    List<Produto> produtos = ViewBag.Produtos;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h2>Gerenciamento dos Produtos</h2>
+    <a asp-action="Cadastrar">Cadastrar Produto</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Criado em</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Produto item in produtos)
+            {
+                <tr>
+                    <td>@item.Nome</td>
+                    <td>@item.Descricao</td>
+                    <td>@item.Preco.ToString("C2")</td>
+                    <td>@item.Quantidade</td>
+                    <td>@item.CriadoEm</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p>
+        <b>Dados atualizados em: </b> @data
+    </p>
+</body>
+</html>

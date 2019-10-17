@@ -10,10 +10,12 @@ namespace EcommerceOsorio.Controllers
 {
     public class ProdutoController : Controller
     {
-        private readonly ProdutoDAO produtoDAO;
-        public ProdutoController(Context context)
+        //readonly serve para dizer que o objeto só receberá informação no 
+        //contrutor ou na criação do objeto
+        private readonly ProdutoDAO _produtoDAO;
+        public ProdutoController(ProdutoDAO produtoDAO)
         {
-            produtoDAO = new ProdutoDAO(context);
+            _produtoDAO = produtoDAO;
         }
         public IActionResult Cadastrar()
         {
@@ -29,7 +31,14 @@ namespace EcommerceOsorio.Controllers
                 Quantidade = Convert.ToInt32(txtQuantidade),
                 Preco = Convert.ToDouble(txtPreco)
             };
-            produtoDAO.Cadastrar(p);
+            _produtoDAO.Cadastrar(p);
+            return View();
+        }
+
+        public IActionResult Index()
+        {
+            ViewBag.Produtos = _produtoDAO.ListarProdutos();
+            ViewBag.DataHora = DateTime.Now;
             return View();
         }
     }
