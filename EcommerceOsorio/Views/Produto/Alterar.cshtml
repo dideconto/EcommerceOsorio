@@ -1,0 +1,33 @@
+﻿@{ 
+    Produto produto = ViewBag.Produto;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Alterar</title>
+</head>
+<body>
+    <form asp-action="Alterar" method="post">
+        <input type="hidden" value="@produto.ProdutoId" name="hdnId" />
+        <label>Id:</label>
+        <input type="text" name="txtId" value="@produto.ProdutoId" readonly="" /><br />
+
+        <label>Nome:</label>
+        <input type="text" name="txtNome" value="@produto.Nome" /><br />
+
+        <label>Descrição:</label>
+        <input type="text" name="txtDescricao" value="@produto.Descricao" /><br />
+
+        <label>Preço:</label>
+        <input type="text" name="txtPreco" value="@produto.Preco" /><br />
+
+        <label>Quantidade:</label>
+        <input type="text" name="txtQuantidade" value="@produto.Quantidade" /><br />
+
+        <input type="submit" value="Salvar" />
+    </form>
+</body>
+</html>

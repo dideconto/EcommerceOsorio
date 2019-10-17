@@ -32,5 +32,11 @@ namespace EcommerceOsorio.DAL
             _context.Produtos.Remove(BuscarProdutoPorId(id));
             _context.SaveChanges();
         }
+
+        public void Alterar(Produto p)
+        {
+            _context.Produtos.Update(p);
+            _context.SaveChanges();
+        }
     }
 }
