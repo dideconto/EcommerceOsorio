@@ -1,28 +1,26 @@
-﻿@{
-    Produto produto = ViewBag.Produto;
-}
+﻿@model Produto
 <form asp-action="Alterar" method="post">
-    <input type="hidden" value="@produto.ProdutoId" name="hdnId" />
+    <input type="hidden" asp-for="ProdutoId"/>
 
     <div class="form-group" id="Nome">
         <label>Id:</label>
-        <input type="text" class="form-control" name="txtId" value="@produto.ProdutoId" readonly="" />
+        <input type="text" class="form-control" asp-for="ProdutoId" readonly="" />
     </div>
     <div class="form-group" id="Nome">
         <label>Nome:</label>
-        <input type="text" class="form-control" name="txtNome" value="@produto.Nome" />
+        <input type="text" class="form-control" asp-for="Nome"/>
     </div>
-    <div class="form-group" id="Nome">
+    <div class="form-group" id="Descricao">
         <label>Descrição:</label>
-        <input type="text" class="form-control" name="txtDescricao" value="@produto.Descricao" />
+        <input type="text" class="form-control" asp-for="Descricao"/>
     </div>
-    <div class="form-group" id="Nome">
+    <div class="form-group" id="Preco">
         <label>Preço:</label>
-        <input type="text" class="form-control" name="txtPreco" value="@produto.Preco" />
+        <input type="text" class="form-control" asp-for="Preco"/>
     </div>
-    <div class="form-group" id="Nome">
+    <div class="form-group" id="Quantidade">
         <label>Quantidade:</label>
-        <input type="text" class="form-control" name="txtQuantidade" value="@produto.Quantidade" />
+        <input type="text" class="form-control" asp-for="Quantidade"/>
     </div>
     <input type="submit" class="btn btn-primary" value="Salvar" />
 </form>

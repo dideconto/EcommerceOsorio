@@ -22,23 +22,15 @@ namespace EcommerceOsorio.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Cadastrar(string txtNome, string txtDescricao, string txtPreco, string txtQuantidade)
+        public IActionResult Cadastrar(Produto p)
         {
-            Produto p = new Produto
-            {
-                Nome = txtNome,
-                Descricao = txtDescricao,
-                Quantidade = Convert.ToInt32(txtQuantidade),
-                Preco = Convert.ToDouble(txtPreco)
-            };
             _produtoDAO.Cadastrar(p);
             return RedirectToAction("Index");
         }
         public IActionResult Index()
         {
-            ViewBag.Produtos = _produtoDAO.ListarProdutos();
             ViewBag.DataHora = DateTime.Now;
-            return View();
+            return View(_produtoDAO.ListarProdutos());
         }
         public IActionResult Remover(int id)
         {
@@ -48,19 +40,12 @@ namespace EcommerceOsorio.Controllers
 
         public IActionResult Alterar(int id)
         {
-            ViewBag.Produto = _produtoDAO.BuscarProdutoPorId(id);
-            return View();
+            return View(_produtoDAO.BuscarProdutoPorId(id));
         }
 
         [HttpPost]
-        public IActionResult Alterar(string txtId, string hdnId, string txtNome, string txtDescricao, string txtPreco, string txtQuantidade)
+        public IActionResult Alterar(Produto p)
         {
-            Produto p = _produtoDAO.BuscarProdutoPorId(Convert.ToInt32(hdnId));
-            p.Nome = txtNome;
-            p.Descricao = txtDescricao;
-            p.Quantidade = Convert.ToInt32(txtQuantidade);
-            p.Preco = Convert.ToDouble(txtPreco);
-
             _produtoDAO.Alterar(p);
             return RedirectToAction("Index");
         }

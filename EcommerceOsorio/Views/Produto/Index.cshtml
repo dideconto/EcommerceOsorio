@@ -1,6 +1,6 @@
-﻿@{ 
+﻿@model List<Produto>
+@{ 
     DateTime data = ViewBag.DataHora;
-    List<Produto> produtos = ViewBag.Produtos;
 }
 <h2>Gerenciamento dos Produtos</h2>
 <a asp-action="Cadastrar" class="btn btn-primary">Cadastrar Produto</a>
@@ -18,7 +18,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (Produto item in produtos)
+        @foreach (Produto item in Model)
         {
             <tr>
                 <td>@item.Nome</td>
