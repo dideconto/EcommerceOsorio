@@ -1,21 +1,19 @@
-﻿<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Cadastrar</title>
-</head>
-<body>
-    <form asp-action="Cadastrar" method="post">
+﻿<form asp-action="Cadastrar" method="post">
+    <div class="form-group" id="Nome">
         <label>Nome:</label>
-        <input type="text" name="txtNome" /><br />
+        <input type="text" class="form-control" name="txtNome" />
+    </div>
+    <div class="form-group" id="Descricao">
         <label>Descrição:</label>
-        <input type="text" name="txtDescricao" /><br />
+        <input type="text" class="form-control" name="txtDescricao" />
+    </div>
+    <div class="form-group" id="Preco">
         <label>Preço:</label>
-        <input type="text" name="txtPreco" /><br />
+        <input type="text" class="form-control" name="txtPreco" />
+    </div>
+    <div class="form-group" id="Quantidade">
         <label>Quantidade:</label>
-        <input type="text" name="txtQuantidade" /><br />
-        <input type="submit" value="Cadastrar" />
-    </form>
-</body>
-</html>
+        <input type="text" class="form-control" name="txtQuantidade" />
+    </div>
+    <input type="submit" class="btn btn-primary" value="Cadastrar" />
+</form>

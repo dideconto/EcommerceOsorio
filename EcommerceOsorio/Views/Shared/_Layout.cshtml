@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @* Barra de navegação *@
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Ecommerce Osório</a>
+    </nav>
+
+    @* Conteúdo *@
+    <div class="container" style="margin-top:30px;margin-bottom:30px">
+        @RenderBody()
+    </div>
+
+    @* Rodapé *@
+    <hr />
+    <footer>
+        <p style="text-align:center">
+            &copy; @DateTime.Now.Year - Desenvolvido por Diogo Steinke Deconto
+        </p>
+    </footer>
+</body>
+</html>

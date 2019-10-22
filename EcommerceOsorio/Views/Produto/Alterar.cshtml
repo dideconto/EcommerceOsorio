@@ -1,33 +1,28 @@
-﻿@{ 
+﻿@{
     Produto produto = ViewBag.Produto;
 }
+<form asp-action="Alterar" method="post">
+    <input type="hidden" value="@produto.ProdutoId" name="hdnId" />
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Alterar</title>
-</head>
-<body>
-    <form asp-action="Alterar" method="post">
-        <input type="hidden" value="@produto.ProdutoId" name="hdnId" />
+    <div class="form-group" id="Nome">
         <label>Id:</label>
-        <input type="text" name="txtId" value="@produto.ProdutoId" readonly="" /><br />
-
+        <input type="text" class="form-control" name="txtId" value="@produto.ProdutoId" readonly="" />
+    </div>
+    <div class="form-group" id="Nome">
         <label>Nome:</label>
-        <input type="text" name="txtNome" value="@produto.Nome" /><br />
-
+        <input type="text" class="form-control" name="txtNome" value="@produto.Nome" />
+    </div>
+    <div class="form-group" id="Nome">
         <label>Descrição:</label>
-        <input type="text" name="txtDescricao" value="@produto.Descricao" /><br />
-
+        <input type="text" class="form-control" name="txtDescricao" value="@produto.Descricao" />
+    </div>
+    <div class="form-group" id="Nome">
         <label>Preço:</label>
-        <input type="text" name="txtPreco" value="@produto.Preco" /><br />
-
+        <input type="text" class="form-control" name="txtPreco" value="@produto.Preco" />
+    </div>
+    <div class="form-group" id="Nome">
         <label>Quantidade:</label>
-        <input type="text" name="txtQuantidade" value="@produto.Quantidade" /><br />
-
-        <input type="submit" value="Salvar" />
-    </form>
-</body>
-</html>
+        <input type="text" class="form-control" name="txtQuantidade" value="@produto.Quantidade" />
+    </div>
+    <input type="submit" class="btn btn-primary" value="Salvar" />
+</form>
