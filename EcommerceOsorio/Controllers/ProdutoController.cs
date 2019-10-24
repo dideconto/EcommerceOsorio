@@ -24,8 +24,16 @@ namespace EcommerceOsorio.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Produto p)
         {
-            _produtoDAO.Cadastrar(p);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                if (_produtoDAO.Cadastrar(p))
+                {
+                    return RedirectToAction("Index");
+                }
+                ModelState.AddModelError("", "Esse produto já existe!");
+                return View(p);
+            }
+            return View(p);
         }
         public IActionResult Index()
         {
