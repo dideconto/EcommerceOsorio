@@ -1,0 +1,12 @@
+C:\ProfessorDiogo\C#\EcommerceOsorio\Repository\bin\Debug\netcoreapp2.1\Repository.deps.json
+C:\ProfessorDiogo\C#\EcommerceOsorio\Repository\bin\Debug\netcoreapp2.1\Repository.dll
+C:\ProfessorDiogo\C#\EcommerceOsorio\Repository\obj\Debug\netcoreapp2.1\Repository.csprojAssemblyReference.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\Repository\obj\Debug\netcoreapp2.1\Repository.csproj.CoreCompileInputs.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\Repository\obj\Debug\netcoreapp2.1\Repository.AssemblyInfoInputs.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\Repository\obj\Debug\netcoreapp2.1\Repository.AssemblyInfo.cs
+C:\ProfessorDiogo\C#\EcommerceOsorio\Repository\bin\Debug\netcoreapp2.1\Repository.pdb
+C:\ProfessorDiogo\C#\EcommerceOsorio\Repository\bin\Debug\netcoreapp2.1\Domain.dll
+C:\ProfessorDiogo\C#\EcommerceOsorio\Repository\bin\Debug\netcoreapp2.1\Domain.pdb
+C:\ProfessorDiogo\C#\EcommerceOsorio\Repository\obj\Debug\netcoreapp2.1\Repository.csproj.CopyComplete
+C:\ProfessorDiogo\C#\EcommerceOsorio\Repository\obj\Debug\netcoreapp2.1\Repository.dll
+C:\ProfessorDiogo\C#\EcommerceOsorio\Repository\obj\Debug\netcoreapp2.1\Repository.pdb

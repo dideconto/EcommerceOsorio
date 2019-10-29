@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using EcommerceOsorio.DAL;
-using EcommerceOsorio.Models;
+using Domain;
 using Microsoft.AspNetCore.Mvc;
+using Repository;
 
 namespace EcommerceOsorio.Controllers
 {
@@ -38,7 +38,7 @@ namespace EcommerceOsorio.Controllers
         public IActionResult Index()
         {
             ViewBag.DataHora = DateTime.Now;
-            return View(_produtoDAO.ListarProdutos());
+            return View(_produtoDAO.ListarTodos());
         }
         public IActionResult Remover(int id)
         {
@@ -48,7 +48,7 @@ namespace EcommerceOsorio.Controllers
 
         public IActionResult Alterar(int id)
         {
-            return View(_produtoDAO.BuscarProdutoPorId(id));
+            return View(_produtoDAO.BuscarPorId(id));
         }
 
         [HttpPost]

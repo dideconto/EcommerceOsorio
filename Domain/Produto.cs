@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EcommerceOsorio.Models
+namespace Domain
 {
     //Annotations ASP.NET Core
     [Table("Produtos")]

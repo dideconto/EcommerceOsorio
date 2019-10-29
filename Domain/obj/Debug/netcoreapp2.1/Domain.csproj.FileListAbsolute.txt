@@ -1,0 +1,9 @@
+C:\ProfessorDiogo\C#\EcommerceOsorio\Domain\bin\Debug\netcoreapp2.1\Domain.deps.json
+C:\ProfessorDiogo\C#\EcommerceOsorio\Domain\bin\Debug\netcoreapp2.1\Domain.dll
+C:\ProfessorDiogo\C#\EcommerceOsorio\Domain\bin\Debug\netcoreapp2.1\Domain.pdb
+C:\ProfessorDiogo\C#\EcommerceOsorio\Domain\obj\Debug\netcoreapp2.1\Domain.csprojAssemblyReference.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\Domain\obj\Debug\netcoreapp2.1\Domain.csproj.CoreCompileInputs.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfoInputs.cache
+C:\ProfessorDiogo\C#\EcommerceOsorio\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfo.cs
+C:\ProfessorDiogo\C#\EcommerceOsorio\Domain\obj\Debug\netcoreapp2.1\Domain.dll
+C:\ProfessorDiogo\C#\EcommerceOsorio\Domain\obj\Debug\netcoreapp2.1\Domain.pdb

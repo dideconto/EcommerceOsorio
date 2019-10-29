@@ -19,12 +19,12 @@ using EcommerceOsorio;
 #line default
 #line hidden
 #line 2 "C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\Views\_ViewImports.cshtml"
-using EcommerceOsorio.Models;
+using Domain;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f6de898be7d73183dfe3136d655297db0f6bef3c", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"98423cf516928c2a02e6ac5e90bf13ccd6cf6ae9", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"509cc88d7c49cb527086eadbb3a82f6c283d7de6", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

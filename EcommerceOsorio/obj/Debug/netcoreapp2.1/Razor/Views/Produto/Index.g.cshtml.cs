@@ -19,12 +19,12 @@ using EcommerceOsorio;
 #line default
 #line hidden
 #line 2 "C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\Views\_ViewImports.cshtml"
-using EcommerceOsorio.Models;
+using Domain;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d2cde024fae1ef0239dcb1eb8396816d400e28a3", @"/Views/Produto/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"98423cf516928c2a02e6ac5e90bf13ccd6cf6ae9", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"509cc88d7c49cb527086eadbb3a82f6c283d7de6", @"/Views/_ViewImports.cshtml")]
     public class Views_Produto_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Produto>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Cadastrar", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -65,7 +65,7 @@ using EcommerceOsorio.Models;
             WriteLiteral("<h2>Gerenciamento dos Produtos</h2>\r\n");
             EndContext();
             BeginContext(106, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "21e95647884c4655a27efd6c4b28847b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3bdd2aa01dab4f679cd73faa5140982c", async() => {
                 BeginContext(156, 17, true);
                 WriteLiteral("Cadastrar Produto");
                 EndContext();
@@ -162,7 +162,7 @@ using EcommerceOsorio.Models;
             WriteLiteral("</td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(869, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "65d946a4fbbb41daad676a4e6490235a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc1c60e197db4ad082f8aba35e363f9d", async() => {
                 BeginContext(947, 7, true);
                 WriteLiteral("Remover");
                 EndContext();
@@ -198,7 +198,7 @@ using EcommerceOsorio.Models;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1025, 90, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bfb94e295cda403d8c48ff613273f48f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "03bcef919a844b9ba2b5c47e8d955420", async() => {
                 BeginContext(1104, 7, true);
                 WriteLiteral("Alterar");
                 EndContext();
