@@ -18,4 +18,5 @@
 
 7 - Adicionar uma migração e atualizar o banco sempre que for modificado algum 
 modelo
-	- Add-Migration NomeMigracao; Update-Database -verbose
+	- Add-Migration NomeMigracao -Project: Repository; 
+		Update-Database -verbose -Project: Repository

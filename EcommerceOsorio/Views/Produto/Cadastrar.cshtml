@@ -4,7 +4,7 @@
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="form-group" id="Nome">
         <label asp-for="Nome"></label>
-        <input placeholder="Nome do produto" type="text" class="form-control" asp-for="Nome"/>
+        <input placeholder="Nome do produto" type="text" class="form-control" asp-for="Nome" />
         <span asp-validation-for="Nome" class="text-danger"></span>
     </div>
     <div class="form-group" id="Descricao">
@@ -21,6 +21,13 @@
         <label asp-for="Quantidade"></label>
         <input type="text" placeholder="Quantidade do produto" class="form-control" asp-for="Quantidade" />
         <span asp-validation-for="Quantidade" class="text-danger"></span>
+    </div>
+    <div class="form-group" id="Categoria">
+        <label>Categoria:</label>
+        <select asp-items="@ViewBag.Categorias" class="form-control"
+            name="drpCategorias">
+            <option> -- SELECIONE -- </option>
+        </select>
     </div>
     <input type="submit" class="btn btn-primary" value="Cadastrar" />
 </form>

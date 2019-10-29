@@ -34,6 +34,7 @@ namespace EcommerceOsorio
 
             //Criar ID dos DAOs
             services.AddScoped<ProdutoDAO>();
+            services.AddScoped<CategoriaDAO>();
 
             //Criar ID de contexto
             services.AddDbContext<Context>
