@@ -32,3 +32,4 @@ C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\bin\Debug\netcoreapp2.1\Dom
 C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\bin\Debug\netcoreapp2.1\Repository.pdb
 C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\Create.g.cshtml.cs
 C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\Razor\Views\Categoria\Index.g.cshtml.cs
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Cadastrar.g.cshtml.cs

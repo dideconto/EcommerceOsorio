@@ -3,7 +3,7 @@
     DateTime data = ViewBag.DataHora;
 }
 <h2>Gerenciamento dos Produtos</h2>
-<a asp-action="Cadastrar" class="btn btn-primary">Cadastrar Produto</a>
+<a asp-action="Cadastrar" class="btn btn-success">Cadastrar Produto</a>
 
 <table class="table table-hover table-striped" style="margin-top:15px;margin-bottom:15px">
     <thead>
@@ -27,10 +27,10 @@
                 <td>@item.Quantidade</td>
                 <td>@item.CriadoEm</td>
                 <td>
-                    <a asp-action="Remover" asp-route-id="@item.ProdutoId" class="btn btn-danger">Remover</a>
+                    <a asp-action="Remover" asp-route-id="@item.ProdutoId" class="btn btn-primary">Remover</a>
                 </td>
                 <td>
-                    <a asp-action="Alterar" asp-route-id="@item.ProdutoId" class="btn btn-warning">Alterar</a>
+                    <a asp-action="Alterar" asp-route-id="@item.ProdutoId" class="btn btn-info">Alterar</a>
                 </td>
             </tr>
         }

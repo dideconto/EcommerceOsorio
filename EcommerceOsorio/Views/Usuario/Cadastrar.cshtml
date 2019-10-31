@@ -1,0 +1,51 @@
+﻿@model Usuario
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <fieldset style="margin-bottom:30px">
+        <legend>Dados do Endereço</legend>
+        <div class="form-group" id="Cep">
+            <label asp-for="Endereco.Cep"></label>
+            <input type="text" class="form-control" asp-for="Endereco.Cep" />
+            <span asp-validation-for="Endereco.Cep" class="text-danger"></span>
+        </div>
+        <input type="submit" value="Buscar" class="btn btn-warning"
+               asp-action="BuscarCep"  asp-controller="Usuario" />
+        <div class="form-group" id="Rua">
+            <label asp-for="Endereco.Logradouro"></label>
+            <input type="text" class="form-control" asp-for="Endereco.Logradouro"
+                   readonly="" />
+        </div>
+        <div class="form-group" id="Bairro">
+            <label asp-for="Endereco.Bairro"></label>
+            <input type="text" class="form-control" asp-for="Endereco.Bairro"
+                   readonly="" />
+        </div>
+        <div class="form-group" id="Cidade">
+            <label asp-for="Endereco.Localidade"></label>
+            <input type="text" class="form-control" asp-for="Endereco.Localidade"
+                   readonly="" />
+        </div>
+        <div class="form-group" id="Estado">
+            <label asp-for="Endereco.Uf"></label>
+            <input type="text" class="form-control" asp-for="Endereco.Uf"
+                   readonly="" />
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <div class="form-group" id="Email">
+            <label asp-for="Email"></label>
+            <input type="text" class="form-control" asp-for="Email"/>
+        </div>
+        <div class="form-group" id="Senha">
+            <label asp-for="Senha"></label>
+            <input type="text" class="form-control" asp-for="Senha"/>
+        </div>
+        <div class="form-group" id="ConfirmacaoSenha">
+            <label asp-for="ConfirmacaoSenha"></label>
+            <input type="text" class="form-control" asp-for="ConfirmacaoSenha" />
+        </div>
+        <input type="submit" value="Cadastrar" class="btn btn-success" />
+    </fieldset>
+</form>
