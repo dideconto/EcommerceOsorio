@@ -28,18 +28,23 @@ namespace EcommerceOsorio
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
+                options.CheckConsentNeeded = context => false;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
             //Criar ID dos DAOs
             services.AddScoped<ProdutoDAO>();
             services.AddScoped<CategoriaDAO>();
+            services.AddScoped<UsuarioDAO>();
 
             //Criar ID de contexto
             services.AddDbContext<Context>
                 (options => options.UseSqlServer
                 (Configuration.GetConnectionString("EcommerceConnection")));
+
+            //Configurar a sessão ANTES do services.AddMvc()
+            services.AddSession();
+            services.AddDistributedMemoryCache();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -58,6 +63,7 @@ namespace EcommerceOsorio
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

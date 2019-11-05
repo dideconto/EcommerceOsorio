@@ -46,6 +46,7 @@
             <label asp-for="ConfirmacaoSenha"></label>
             <input type="text" class="form-control" asp-for="ConfirmacaoSenha" />
         </div>
-        <input type="submit" value="Cadastrar" class="btn btn-success" />
+        <input type="submit" value="Cadastrar" class="btn btn-success" 
+               asp-action="Cadastrar" asp-controller="Usuario"/>
     </fieldset>
 </form>

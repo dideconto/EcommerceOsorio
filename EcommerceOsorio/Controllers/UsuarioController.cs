@@ -12,10 +12,10 @@ namespace EcommerceOsorio.Controllers
 {
     public class UsuarioController : Controller
     {
-        private readonly ProdutoDAO _produtoDAO;
-        public UsuarioController(ProdutoDAO produtoDAO)
+        private readonly UsuarioDAO _usuarioDAO;
+        public UsuarioController(UsuarioDAO usuarioDAO)
         {
-            _produtoDAO = produtoDAO;
+            _usuarioDAO = usuarioDAO;
         }
         public IActionResult Index()
         {
@@ -24,21 +24,43 @@ namespace EcommerceOsorio.Controllers
 
         public IActionResult Cadastrar()
         {
-            return View((Usuario) TempData["Usuario"]);
+            Usuario u = new Usuario();
+            if (TempData["Usuario"] != null)
+            {
+                u = JsonConvert.DeserializeObject<Usuario>(TempData["Usuario"].ToString());
+            }
+            return View(u);
         }
-
-        [TempData]
-        public Usuario Usuario { get; set; }
 
         [HttpPost]
         public IActionResult BuscarCep(Usuario u)
         {
-            string url = "https://viacep.com.br/ws/" + u.Endereco.Cep + "/json/";
-            WebClient client = new WebClient();
-            string resultado = client.DownloadString(url);
-            Usuario.Endereco = JsonConvert.DeserializeObject<Endereco>(resultado);
-            TempData["Usuario"] = Usuario;
+            try
+            {
+                string url = "https://viacep.com.br/ws/" + u.Endereco.Cep + "/json/";
+                WebClient client = new WebClient();
+                u.Endereco = JsonConvert.DeserializeObject<Endereco>(client.DownloadString(url));
+                TempData["Usuario"] = JsonConvert.SerializeObject(u);
+            }
+            catch (Exception)
+            {
+                //Mostrar uma mensagem para o usuário
+            }
             return RedirectToAction("Cadastrar");
+        }
+
+        [HttpPost]
+        public IActionResult Cadastrar(Usuario u)
+        {
+            if (ModelState.IsValid)
+            {
+                if (_usuarioDAO.Cadastrar(u))
+                {
+                    return RedirectToAction("Index");
+                }
+                ModelState.AddModelError("","Esse e-mail já está sendo usado!");
+            }
+            return View(u);
         }
     }
 }
