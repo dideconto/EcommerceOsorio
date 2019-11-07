@@ -1,0 +1,30 @@
+﻿@model List<Produto>
+
+<div id="Categorias">
+    <ul class="pagination pagination-lg justify-content-center" style="margin:20px 0">
+        @foreach (Categoria item in ViewBag.Categorias)
+        {
+            <li class="page-item">
+                <a class="page-link" asp-action="Index" asp-controller="Home" asp-route-id="@item.CategoriaId">
+                    @item.Nome
+                </a>
+            </li>
+        }
+    </ul>
+</div>
+
+<div class="row" id="Produtos">
+    @foreach (Produto item in Model)
+    {
+        <div class="col-md-3" style="text-align:center; margin-bottom:15px">
+            <a asp-action="Detalhes" asp-controller="Home" asp-route-id="@item.ProdutoId">
+                <img src="~/ecommerceimagens/@item.Imagem" alt="@item.Descricao"
+                     style="width:200px;height:180px" class="img-thumbnail" /><br />
+            </a>
+            <a asp-action="Detalhes" asp-controller="Home" asp-route-id="@item.ProdutoId">
+                @item.Nome
+            </a><br />
+            <b>Preço: </b> @item.Preco.ToString("C2")
+        </div>
+    }
+</div>

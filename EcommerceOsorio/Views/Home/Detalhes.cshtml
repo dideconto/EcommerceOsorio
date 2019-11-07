@@ -1,0 +1,17 @@
+﻿@model Produto
+
+<h2>@Model.Nome</h2>
+
+<table>
+    <tr>
+        <td>
+            <img src="~/ecommerceimagens/@Model.Imagem" class="rounded" 
+                 style="width:400px;height:300px" alt="@Model.Descricao" />
+        </td>
+        <td style="vertical-align:top;padding-left:10px">
+            <b>Descrição: </b>
+            <p>@Model.Descricao</p>
+            <b>Preço: </b> @Model.Preco.ToString("C2")
+        </td>
+    </tr>
+</table>

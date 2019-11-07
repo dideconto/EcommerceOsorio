@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,6 +46,11 @@ namespace Repository
         {
             _context.Produtos.Update(p);
             _context.SaveChanges();
+        }
+
+        public List<Produto> ListarPorCategoria(int? id)
+        {
+            return _context.Produtos.Include(x => x.Categoria).Where(x => x.Categoria.CategoriaId == id).ToList();
         }
     }
 }
