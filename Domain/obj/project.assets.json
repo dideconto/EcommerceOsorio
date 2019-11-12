@@ -688,7 +688,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aluno\\.nuget\\packages\\": {},
+    "C:\\Users\\Administrador\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -697,14 +697,14 @@
       "projectUniqueName": "C:\\ProfessorDiogo\\C#\\EcommerceOsorio\\Domain\\Domain.csproj",
       "projectName": "Domain",
       "projectPath": "C:\\ProfessorDiogo\\C#\\EcommerceOsorio\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
       "outputPath": "C:\\ProfessorDiogo\\C#\\EcommerceOsorio\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

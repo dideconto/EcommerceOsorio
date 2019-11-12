@@ -11,7 +11,9 @@
         <td style="vertical-align:top;padding-left:10px">
             <b>Descrição: </b>
             <p>@Model.Descricao</p>
-            <b>Preço: </b> @Model.Preco.ToString("C2")
+            <b>Preço: </b> @Model.Preco.ToString("C2")<br />
+            <a asp-action="AdicionarAoCarrinho" asp-controller="Home"
+               class="btn btn-success" asp-route-id="@Model.ProdutoId">Adicionar</a>
         </td>
     </tr>
 </table>

@@ -10,8 +10,8 @@ using Repository;
 namespace Repository.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20191031121931_AddTableUsuariosEnderecos")]
-    partial class AddTableUsuariosEnderecos
+    [Migration("20191112134043_CriarBanco")]
+    partial class CriarBanco
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,7 +43,8 @@ namespace Repository.Migrations
 
                     b.Property<string>("Bairro");
 
-                    b.Property<string>("Cep");
+                    b.Property<string>("Cep")
+                        .IsRequired();
 
                     b.Property<string>("Localidade");
 
@@ -54,6 +55,27 @@ namespace Repository.Migrations
                     b.HasKey("EnderecoId");
 
                     b.ToTable("Enderecos");
+                });
+
+            modelBuilder.Entity("Domain.ItemVenda", b =>
+                {
+                    b.Property<int>("ItemVendaId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CriadoEm");
+
+                    b.Property<double>("Preco");
+
+                    b.Property<int?>("ProdutoId");
+
+                    b.Property<int>("Quantidade");
+
+                    b.HasKey("ItemVendaId");
+
+                    b.HasIndex("ProdutoId");
+
+                    b.ToTable("ItensVenda");
                 });
 
             modelBuilder.Entity("Domain.Produto", b =>
@@ -68,6 +90,8 @@ namespace Repository.Migrations
 
                     b.Property<string>("Descricao")
                         .HasMaxLength(100);
+
+                    b.Property<string>("Imagem");
 
                     b.Property<string>("Nome")
                         .IsRequired();
@@ -102,6 +126,13 @@ namespace Repository.Migrations
                     b.HasIndex("EnderecoId");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("Domain.ItemVenda", b =>
+                {
+                    b.HasOne("Domain.Produto", "Produto")
+                        .WithMany()
+                        .HasForeignKey("ProdutoId");
                 });
 
             modelBuilder.Entity("Domain.Produto", b =>

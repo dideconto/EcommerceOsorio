@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EcommerceOsorio.Utils;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -36,6 +37,9 @@ namespace EcommerceOsorio
             services.AddScoped<ProdutoDAO>();
             services.AddScoped<CategoriaDAO>();
             services.AddScoped<UsuarioDAO>();
+            services.AddScoped<ItemVendaDAO>();
+            services.AddScoped<UtilsSession>();
+            services.AddHttpContextAccessor();
 
             //Criar ID de contexto
             services.AddDbContext<Context>

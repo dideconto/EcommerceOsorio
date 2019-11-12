@@ -35,3 +35,4 @@ C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\Raz
 C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Cadastrar.g.cshtml.cs
 C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
 C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\Razor\Views\Home\Detalhes.g.cshtml.cs
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\Razor\Views\Home\CarrinhoCompras.g.cshtml.cs
