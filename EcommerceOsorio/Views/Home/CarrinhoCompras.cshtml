@@ -1,47 +1,77 @@
 ﻿@model IEnumerable<Domain.ItemVenda>
 
 @{
-    ViewData["Title"] = "CarrinhoCompras";
+    ViewData["Title"] = "Carrinho de Compras";
 }
 
-<h2>CarrinhoCompras</h2>
+<h2>Carrinho de Compras</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<table style="margin-top:30px;margin-bottom:30px;text-align:center;" class="table table-hover table-stripedS">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Quantidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Preco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CriadoEm)
-            </th>
+            <th>Imagem</th>
+            <th>Produto</th>
+            <th></th>
+            <th>Quantidade</th>
+            <th></th>
+            <th>Preço</th>
+            <th>Subtotal</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Preco)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CriadoEm)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ItemVendaId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ItemVendaId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ItemVendaId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/ecommerceimagens/@item.Produto.Imagem"
+                         alt="@item.Produto.Descricao"
+                         style="width:120px;height:100px" />
+                </td>
+                <td style="vertical-align:middle">
+                    @item.Produto.Nome
+                </td>
+                <td style="vertical-align:middle">
+                    <a asp-action="DiminuirQuantidade"
+                       asp-controller="Home"
+                       asp-route-id="@item.ItemVendaId"
+                       class="btn btn-info">
+                        -
+                    </a>
+                </td>
+                <td style="vertical-align:middle">
+                    @item.Quantidade
+                </td>
+                <td style="vertical-align:middle">
+                    <a asp-action="AumentarQuantidade"
+                       asp-controller="Home"
+                       asp-route-id="@item.ItemVendaId"
+                       class="btn btn-info">
+                        +
+                    </a>
+                </td>
+                <td style="vertical-align:middle">
+                    @item.Preco.ToString("C2")
+                </td>
+                <td style="vertical-align:middle">
+                    @{
+                        double subtotal = item.Preco * item.Quantidade;
+                    }
+                    @subtotal.ToString("C2")
+                </td>
+                <td style="vertical-align:middle">
+                    <a asp-action="RemoverDoCarrinho"
+                       asp-controller="Home"
+                       asp-route-id="@item.ItemVendaId"
+                       class="btn btn-primary">
+                        Remover
+                    </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<div class="card border-success mb-3" style="max-width: 20rem;">
+    <div class="card-header"><b>Total: </b> @ViewBag.TotalCarrinho.ToString("C2")</div>
+</div>

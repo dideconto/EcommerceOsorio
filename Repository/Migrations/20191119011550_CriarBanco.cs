@@ -93,7 +93,8 @@ namespace Repository.Migrations
                     ProdutoId = table.Column<int>(nullable: true),
                     Quantidade = table.Column<int>(nullable: false),
                     Preco = table.Column<double>(nullable: false),
-                    CriadoEm = table.Column<DateTime>(nullable: false)
+                    CriadoEm = table.Column<DateTime>(nullable: false),
+                    CarrinhoId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

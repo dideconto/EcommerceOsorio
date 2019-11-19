@@ -23,26 +23,6 @@ namespace EcommerceOsorio.Controllers
             _itemVendaDAO = itemVendaDAO;
             _session = session;
         }
-        public IActionResult AdicionarAoCarrinho(int id)
-        {
-            Produto p = _produtoDAO.BuscarPorId(id);
-            ItemVenda item = new ItemVenda
-            {
-                Produto = p,
-                Quantidade = 1,
-                Preco = p.Preco,
-                CarrinhoId = _session.RetornarCarrinhoId()
-            };
-            _itemVendaDAO.Cadastrar(item);
-            return RedirectToAction("CarrinhoCompras");
-        }
-
-        public IActionResult CarrinhoCompras()
-        {
-            return View(_itemVendaDAO.BuscarItensPorCarrinhoId
-                (_session.RetornarCarrinhoId()));
-        }
-
         public IActionResult Index(int? id)
         {
             ViewBag.Categorias = _categoriaDAO.ListarTodos();
@@ -55,6 +35,45 @@ namespace EcommerceOsorio.Controllers
         public IActionResult Detalhes(int id)
         {
             return View(_produtoDAO.BuscarPorId(id));
+        }
+        public IActionResult RemoverDoCarrinho(int id)
+        {
+            _itemVendaDAO.Remover(id);
+            return RedirectToAction("CarrinhoCompras");
+        }
+        public IActionResult CarrinhoCompras()
+        {
+            ViewBag.TotalCarrinho = _itemVendaDAO.
+                RetornarTotalCarrinho(_session.RetornarCarrinhoId());
+
+            return View(_itemVendaDAO.
+                ListarItensPorCarrinhoId
+                (_session.RetornarCarrinhoId()));
+        }
+        public IActionResult AumentarQuantidade(int id)
+        {
+            _itemVendaDAO.AumentarQuantidade(id);
+            return RedirectToAction("CarrinhoCompras");
+        }
+        public IActionResult DiminuirQuantidade(int id)
+        {
+            _itemVendaDAO.DiminuirQuantidade(id);
+            return RedirectToAction("CarrinhoCompras");
+        }
+        public IActionResult AdicionarAoCarrinho(int id)
+        {
+            //Adicionar os produtos dentro do carrinho
+            Produto p = _produtoDAO.BuscarPorId(id);
+            ItemVenda i = new ItemVenda
+            {
+                Produto = p,
+                Quantidade = 1,
+                Preco = p.Preco,
+                CarrinhoId = _session.RetornarCarrinhoId()
+            };
+            //Gravar o objeto na tabela
+            _itemVendaDAO.Cadastrar(i);
+            return RedirectToAction("CarrinhoCompras");
         }
     }
 }
