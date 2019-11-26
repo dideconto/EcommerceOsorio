@@ -1,0 +1,17 @@
+﻿ -- CONFIGURAÇÃO DA AUTENTICAÇÃO(IDENTITY) -- 
+
+ 1 - Instalar a biblioteca na aplicação
+	Microsoft.AspNetCore.Identity.EntityFrameworokCore 2.1.6
+
+2 - Criar uma classe de modelo para controlar a autenticação na aplicação, essa
+classe deve herdar da classe IdentityUser
+
+3 - Alterar a classe Context para utilizar o IdentityDbContext
+
+4 - Configurar o Startup.cs a autenticação na aplicação
+
+5 - Adicionar a migração e fazer o update na base
+
+6 - Cadastrar o usuário na tabela da biblioteca
+
+7 - Criar a área de login e logout na aplicação

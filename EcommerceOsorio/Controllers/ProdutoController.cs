@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,8 @@ using Repository;
 
 namespace EcommerceOsorio.Controllers
 {
+    //[Authorize(Roles = "ADM")]
+    [Authorize]
     public class ProdutoController : Controller
     {
         //readonly serve para dizer que o objeto só receberá informação no 

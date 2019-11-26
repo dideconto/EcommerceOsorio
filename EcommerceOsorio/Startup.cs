@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Domain;
 using EcommerceOsorio.Utils;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -46,6 +48,16 @@ namespace EcommerceOsorio
                 (options => options.UseSqlServer
                 (Configuration.GetConnectionString("EcommerceConnection")));
 
+            //Configurar o Identity - autenticação
+            services.AddIdentity<UsuarioLogado, IdentityRole>().
+                AddEntityFrameworkStores<Context>().AddDefaultTokenProviders();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Usuario/Login";
+                options.AccessDeniedPath = "/Usuario/AcessoNegado";
+            });
+
             //Configurar a sessão ANTES do services.AddMvc()
             services.AddSession();
             services.AddDistributedMemoryCache();
@@ -68,6 +80,7 @@ namespace EcommerceOsorio
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseSession();
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

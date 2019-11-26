@@ -74,3 +74,4 @@ C:\Users\diogo\Desktop\ecommerceosorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\E
 C:\Users\diogo\Desktop\ecommerceosorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.csproj.CopyComplete
 C:\Users\diogo\Desktop\ecommerceosorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.dll
 C:\Users\diogo\Desktop\ecommerceosorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\EcommerceOsorio.pdb
+C:\ProfessorDiogo\C#\EcommerceOsorio\EcommerceOsorio\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Login.g.cshtml.cs

@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class Context : DbContext
+    public class Context : IdentityDbContext<UsuarioLogado>
     {
         public Context(DbContextOptions<Context> options) : base(options) { }
         public DbSet<Produto> Produtos { get; set; }
