@@ -31,7 +31,9 @@ namespace Repository
         }
         public List<Produto> ListarTodos()
         {
-            return _context.Produtos.ToList();
+            return _context.Produtos.
+                Include(x => x.Categoria).
+                ToList();
         }
         public Produto BuscarPorId(int id)
         {
